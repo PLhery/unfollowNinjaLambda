@@ -1,0 +1,43 @@
+{
+  "name": "unfollowninja2",
+  "version": "0.0.1",
+  "description": "AWS lambda functions used by UnfollowNinja",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "gulp checkUnfollow",
+    "compile": "gulp compile",
+    "watch": "gulp",
+    "test": "tslint src/* && mocha",
+    "postinstall": "typings install"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.4.12",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-awslambda": "^0.4.0",
+    "gulp-install": "^0.6.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-zip": "^3.2.0",
+    "mocha": "^3.0.1",
+    "rewire": "^2.5.2",
+    "tslint": "^3.14.0"
+  },
+  "dependencies": {
+    "es6-promise": "^3.2.1",
+    "lodash": "^4.14.1",
+    "twit": "^2.2.4"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "unfollow",
+    "ninja",
+    "twitter",
+    "unfollowninja"
+  ],
+  "author": "MrPointVirgule",
+  "license": "GPL-3.0"
+}
