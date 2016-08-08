@@ -11,7 +11,7 @@
     "compile": "gulp compile",
     "watch": "gulp",
     "test": "tslint src/*.ts && mocha",
-    "postinstall": "typings install"
+    "postinstall": "typings install && npm run compile"
   },
   "devDependencies": {
     "aws-sdk": "^2.4.12",

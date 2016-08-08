@@ -110,7 +110,7 @@ export class NinjaAccount {
                 return this.getFollowers(); // 2 - we get his followers
             })
             .then((result) => {
-                this._account.followers = _.zipObject(result, _.map(result, () => ({})));
+                this._account.followers = _.zipObject(result, _.map(result, () => ({}))) as { [id: string]: { from?: string; }; };
 
                 const params = { // 3 - We add account to db
                     TableName: 'UnfollowNinja',
@@ -243,7 +243,7 @@ export class NinjaAccount {
             access_token: twitterToken,
             access_token_secret: twitterSecret
         });
-        return T.get('account/verify_credentials', {include_entities: false, skip_status: true}).then((response) => {
+        return T.get('account/verify_credentials', <Twit.Params>{include_entities: false, skip_status: true}).then((response) => {
             const profile = response.data;
             if (profile.errors) throw new Error(profile.errors[0].message);
             return {
