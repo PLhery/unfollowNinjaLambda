@@ -10,7 +10,7 @@
     "start": "gulp checkUnfollow",
     "compile": "gulp compile",
     "watch": "gulp",
-    "test": "tslint src/* && mocha",
+    "test": "tslint src/*.ts && mocha",
     "postinstall": "typings install"
   },
   "devDependencies": {

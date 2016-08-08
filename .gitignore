@@ -9,6 +9,9 @@ node_modules
 # npm cache directory
 .npm
 
+# jetbrains
+/.idea/
+
 /dist/
 /typings/
 UNconfig.json
