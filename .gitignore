@@ -12,7 +12,7 @@ node_modules
 # jetbrains
 /.idea/
 
-/dist/
+dist
 /typings/
 UNconfig.json
 /lambda.zip

@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "es6-promise": "registry:npm/es6-promise#3.0.0+20160723033700",
-    "twit": "registry:npm/twit#2.0.0+20160422171648"
-  },
-  "globalDependencies": {
-    "aws-sdk": "registry:dt/aws-sdk#0.0.0+20160802165139"
-  }
-}

@@ -1,3 +1,9 @@
 machine:
   node:
     version: 4.3.1
+dependencies:
+  pre:
+    - cd "BackEnd - AWS Lambda"
+test:
+  pre:
+    - cd "BackEnd - AWS Lambda"

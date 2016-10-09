@@ -49,6 +49,12 @@ export interface Follower {
 export interface Unfollower extends Follower {
     to: string; // ISO date
 }
+
+export interface Recap {
+    newFollowers: number;
+    newUnfollowers: number;
+    total: number;
+}
 // -- End Interfaces --
 
 export class NinjaAccount {
@@ -130,7 +136,7 @@ export class NinjaAccount {
      * Compare DB followers and twitter follower's, update DB and call sendUnfollow() for each unfollowers.
      * @returns Promise with no data
      */
-    public checkUnfollow(): Promise<void> {
+    public checkUnfollow(): Promise<Recap> {
         // TODO : after 5 unfollows the same day, we should stop sending unfollowers and a recap should be sent at the end of the day
 
         return Promise.resolve().then(() => {
@@ -142,7 +148,7 @@ export class NinjaAccount {
             }
         })  .then(() => this.getUnfollowers()) // 2 - compare DB with twitter followers
             .then((result) => {
-                if (!result.newFollowers.length && !result.unfollowers.length) return;
+                if (!result.newFollowers.length && !result.unfollowers.length) return {newFollowers: 0, newUnfollowers: 0, total: _.keys(this._account.followers).length};
 
                 result.newFollowers.forEach((id: string) => { // 3 - Add new followers to the DB
                     this._account.followers[id] = {
@@ -158,7 +164,8 @@ export class NinjaAccount {
                     }));
 
                 return Promise.all(manageUnfollows) // Manage all unfollows in parallel
-                    .then(() => this.saveToDB()); // 5 - update the DB
+                    .then(() => this.saveToDB()) // 5 - update the DB
+                    .then(() => ({newFollowers: result.newFollowers.length, newUnfollowers: result.unfollowers.length, total: _.keys(this._account.followers).length}));
             });
     }
 
