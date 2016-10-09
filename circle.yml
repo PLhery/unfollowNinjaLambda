@@ -2,8 +2,8 @@ machine:
   node:
     version: 4.3.1
 dependencies:
-  pre:
-    - cd "BackEnd - AWS Lambda"
+  override:
+    - cd "BackEnd - AWS Lambda" && npm install
 test:
-  pre:
-    - cd "BackEnd - AWS Lambda"
+  override:
+    - cd "BackEnd - AWS Lambda" && npm test
