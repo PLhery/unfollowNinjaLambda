@@ -1,6 +1,6 @@
 {
   "name": "unfollowNinjaV2-backEnd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AWS lambda functions used by UnfollowNinja",
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "es6-promise": "^4.0.5",
     "lodash": "^4.14.1",
     "oauth": "^0.9.14",
+    "request": "^2.75.0",
     "twit": "^2.2.5"
   },
   "keywords": [
