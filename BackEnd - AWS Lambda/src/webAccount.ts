@@ -19,7 +19,7 @@ export class WebAccount {
                     consumer_secret: config.app_secret
                 }
             }, function(err, res) {
-                resolve(res.body);
+                resolve(res);
             });
         });
     }

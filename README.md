@@ -1,7 +1,7 @@
 # unfollowNinjaLambda
 https://unfollowninja.fr v2 - node.JS web service which detects when you are unfollowed on twitter and notify you.
 
-[![CircleCI](https://circleci.com/gh/PLhery/unfollowNinjaLambda.svg?style=svg)](https://circleci.com/gh/PLhery/unfollowNinjaV2) [![Dependency Status](https://david-dm.org/PLhery/unfollowNinjaV2.svg)](https://david-dm.org/PLhery/unfollowNinjaV2)
+[![CircleCI](https://circleci.com/gh/PLhery/unfollowNinjaV2.svg?style=svg)](https://circleci.com/gh/PLhery/unfollowNinjaV2) Back-End : [![Dependency Status](https://david-dm.org/PLhery/unfollowNinjaV2/status.svg?path=/BackEnd%20-%20AWS%20Lambda)](https://david-dm.org/PLhery/unfollowNinjaV2?path=%2FBackEnd+-+AWS+Lambda) Front-End : [![Dependency Status](https://david-dm.org/PLhery/unfollowNinjaV2/status.svg?path=/FrontEnd%20-%20React)](https://david-dm.org/PLhery/unfollowNinjaV2?path=FrontEnd%20-%20React)
 
 ## Motivation
 
