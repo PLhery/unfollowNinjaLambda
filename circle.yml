@@ -7,3 +7,8 @@ dependencies:
 test:
   override:
     - cd "BackEnd - AWS Lambda" && npm test
+deployment:
+  master:
+    branch: master
+    commands:
+      - cd "FrontEnd - React" && ./deploy-gh-pages.sh
