@@ -4,6 +4,7 @@ machine:
 dependencies:
   override:
     - cd "BackEnd - AWS Lambda" && npm install
+    - cd "FrontEnd - React" && npm install
 test:
   override:
     - cd "BackEnd - AWS Lambda" && npm test
